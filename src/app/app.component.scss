@@ -1,0 +1,6 @@
+.external {
+    &::after {
+      content: "child with external color blue works!";
+      color: blue;
+    }
+  }
