@@ -13,13 +13,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { TheadDirective } from './directives/thead.directive';
 import { TheadComponent } from './components/thead/thead.component';
 import { ChildComponent } from './components/child/child.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TheadDirective,
     TheadComponent,
-    ChildComponent
+    ChildComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

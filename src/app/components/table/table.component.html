@@ -1,0 +1,26 @@
+<wc-table>
+  <wc-thead>
+    <fa-icon icon='coffee' slot="asc-icon"></fa-icon>
+    <mat-icon svgIcon="thumbs-up" slot="desc-icon"></mat-icon>
+    <wc-th style="flex-grow: 3">id</wc-th>
+    <wc-th>name</wc-th>
+    <wc-th>last name</wc-th>
+    <wc-th>job</wc-th>
+    <wc-th style="flex-grow: 20">description</wc-th>
+    <wc-th></wc-th>
+  </wc-thead>  
+  <wc-tbody>
+    <wc-tr *ngFor="let person of persons">
+      <wc-td style="flex-grow: 3">{{ person.id }}</wc-td>
+      <wc-td>{{ person.name }}</wc-td>
+      <wc-td>{{ person.lastName }}</wc-td>
+      <wc-td>{{ person.job }}</wc-td>
+      <wc-td style="flex-grow: 20">{{ person.description }}</wc-td>
+      <wc-td>
+        <ng-container *ngFor="let action of person.actions">
+          <button>{{ action }}</button>
+        </ng-container>
+      </wc-td>
+    </wc-tr>
+  </wc-tbody>
+</wc-table>
